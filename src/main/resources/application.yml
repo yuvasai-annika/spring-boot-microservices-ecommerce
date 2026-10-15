@@ -1,12 +1,14 @@
 spring:
   application:
     name: user-service
-  h2:
-    console:
-      enabled: true
+
   datasource:
-    url: jdbc:h2:mem:test
+    url: jdbc:postgresql://localhost:5433/embarkx
+    username: embarkx
+    password: embarkx
+    driver-class-name: org.postgresql.Driver
+
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
